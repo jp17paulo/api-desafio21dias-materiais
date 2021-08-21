@@ -9,7 +9,7 @@ using api_desafio21dias.Servicos;
 namespace api_desafio21dias.Migrations
 {
     [DbContext(typeof(DbContexto))]
-    [Migration("20210821091528_MateriaisAdd")]
+    [Migration("20210821132943_MateriaisAdd")]
     partial class MateriaisAdd
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
