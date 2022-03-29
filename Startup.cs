@@ -28,6 +28,7 @@ namespace api_desafio21dias
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            Program.AlunosApi = Configuration.GetConnectionString("AlunosApi");
             string strCnn = Configuration.GetConnectionString("MinhaConexao");
             services.AddDbContext<DbContexto>(options => options.UseSqlServer(strCnn));
 
@@ -35,7 +36,7 @@ namespace api_desafio21dias
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { 
-                    Title = "Web API deafio 21 dias",
+                    Title = "Web API desafio 21 dias Materiais",
                     Version = "v1",
                     Description = "Web API Feita para materiais no desafio 21 dias"
                 });
